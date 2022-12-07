@@ -20,6 +20,6 @@ export const split = <T>(list: T[]) => {
     return chunk(list, list.length / 2);
 };
 
-export const isSubset = <A>([a, b]: A[][]) => {
-    return difference(a, b).length === 0 || difference(b, a).length === 0;
+export const removeN = <T>(list: T[], n = 1) => {
+    return list.slice(0, -n);
 };
